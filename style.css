@@ -8,7 +8,7 @@ body {
 }
 
 table {
-    background-color: dark blue !important; /* Hintergrund der Tabelle blau */
+    background-color: solid darkblue !important; /* Hintergrund der Tabelle blau */
     color: grey !important; /* Tabelle */
     border-collapse: collapse;
     width: 100%;
