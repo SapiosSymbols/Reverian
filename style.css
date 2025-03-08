@@ -18,7 +18,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background-color: black; /* Hintergrund der Tabelle */
+    background-color: grey; /* Hintergrund der Tabelle */
     color: white; /* Schriftfarbe */
 }
 
@@ -29,7 +29,7 @@ th, td {
 }
 
 th {
-    background-color: #222; /* Dunkelgrau für die Kopfzeile */
+    background-color: red; /* Dunkelgrau für die Kopfzeile */
 }
 
 
@@ -38,9 +38,9 @@ th {
     width: 100%;
     padding: 10px;
     margin: 20px 0;
-    border: 1px solid white;
+    border: 1px black;
     border-radius: 4px;
     font-size: 16px;
-    background-color: black;
+    background-color: grey;
     color: red;
 }
