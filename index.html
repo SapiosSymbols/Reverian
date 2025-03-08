@@ -285,8 +285,10 @@
                 <td>nicht wahr?</td>
                 <td>li tena?</td>
             </tr>
+        </table>
+    </div>
 
-            <!-- Pronomen: -->
+    <!-- Pronomen: -->
      <div class="category">
         <h2>Pronomen</h2>
         <table id="pronomsTable">
@@ -320,12 +322,21 @@
             </tr>
             <tr>
                 <td>ich</td>
-                <td>phx (Aussprache: fo)</td>
+                <td>phx (Aussprache: "fo")</td>
             </tr>
             <tr>
+                <td>mich</td>
+                <td>vari</td>
+            </tr>
+            <tr>
+                <td>dich</td>
+                <td>bari</td>
+            </tr>
+        </table>
+    </div>
 
-            <!-- Zahlen: -->
-     <div class="category">
+    <!-- Zahlen -->
+    <div class="category">
         <h2>Zahlen</h2>
         <table id="numbersTable">
             <tr>
@@ -333,76 +344,67 @@
                 <th>Reverianisch</th>
             </tr>
             <tr>
-                <td>eins</td>
+                <td>1</td>
                 <td>i</td>
             </tr>
             <tr>
-                <td>zwei</td>
-                <td>dvo</td>
+                <td>2</td>
+                <td>dwo</td>
             </tr>
             <tr>
-                <td>drei</td>
+                <td>3</td>
                 <td>tra</td>
             </tr>
             <tr>
-                <td>vier</td>
+                <td>4</td>
                 <td>kva</td>
             </tr>
             <tr>
-                <td>fünf</td>
+                <td>5</td>
                 <td>pen</td>
             </tr>
             <tr>
-                <td>sechs</td>
+                <td>6</td>
                 <td>sex</td>
             </tr>
             <tr>
-                <td>sieben</td>
+                <td>7</td>
                 <td>set</td>
             </tr>
             <tr>
-                <td>acht</td>
+                <td>8</td>
                 <td>ok</td>
             </tr>
             <tr>
-                <td>neun</td>
+                <td>9</td>
                 <td>ni</td>
             </tr>
             <tr>
-                <td>zehn</td>
+                <td>10</td>
                 <td>dek</td>
             </tr>
-
-
-
-
-    <!-- Weitere Kategorien können hier hinzugefügt werden -->
+        </table>
+    </div>
 
     <script>
         function searchFunction() {
-            var input, filter, tables, tr, td, i, txtValue;
-            input = document.getElementById("searchInput");
-            filter = input.value.toLowerCase();
-            tables = document.getElementsByTagName("table");
+            let input = document.getElementById("searchInput").value.toUpperCase();
+            let tables = document.querySelectorAll("table");
 
-            // Alle Tabellen durchgehen
-            for (var j = 0; j < tables.length; j++) {
-                tr = tables[j].getElementsByTagName("tr");
-
-                // Alle Zeilen der aktuellen Tabelle durchgehen
-                for (i = 1; i < tr.length; i++) { // Überspringe die erste Zeile mit den Headern
-                    td = tr[i].getElementsByTagName("td");
-                    if (td) {
-                        // Text des ersten Zellen (Deutsch) prüfen
-                        txtValue = td[0].textContent || td[0].innerText;
-                        if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                            tr[i].style.display = ""; // Zeige die Zeile an, wenn das Wort passt
-                        } else {
-                            tr[i].style.display = "none"; // Verstecke die Zeile, wenn das Wort nicht passt
+            tables.forEach(table => {
+                let rows = table.getElementsByTagName("tr");
+                for (let i = 1; i < rows.length; i++) {
+                    let cells = rows[i].getElementsByTagName("td");
+                    let match = false;
+                    for (let j = 0; j < cells.length; j++) {
+                        if (cells[j].innerHTML.toUpperCase().indexOf(input) > -1) {
+                            match = true;
+                            break;
                         }
                     }
+                    rows[i].style.display = match ? "" : "none";
                 }
-            }
+            });
         }
     </script>
 
