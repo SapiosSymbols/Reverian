@@ -1,6 +1,6 @@
 body {
-    background-color: black !important; /* Hintergrund des gesamten Körpers schwarz */
-    color: white; /* Schriftfarbe weiß */
+    background-color: grey !important; /* Hintergrund des gesamten Körpers */
+    color: white; /* Schriftfarbe */
     font-family: Arial, sans-serif;
     max-width: 800px;
     margin: auto;
@@ -8,7 +8,7 @@ body {
 }
 
 table {
-    background-color: solid darkblue !important; /* Hintergrund der Tabelle blau */
+    background-color: solid darkblue !important; /* Hintergrund der Tabelle */
     color: grey !important; /* Tabelle */
     border-collapse: collapse;
     width: 100%;
@@ -22,5 +22,5 @@ th, td {
 }
 
 th {
-    background-color: #333; /* Dunkelgraue Überschriften für Kontrast */
+    background-color: #333; /* Überschriften für Kontrast */
 }
