@@ -9,7 +9,7 @@ body {
 
 table {
     background-color: solid darkblue !important; /* Hintergrund der Tabelle */
-    color: grey !important; /* Tabelle */
+    color: black !important; /* Tabelle */
     border-collapse: collapse;
     width: 100%;
     margin-top: 20px;
