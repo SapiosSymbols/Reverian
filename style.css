@@ -8,7 +8,7 @@ body {
 }
 
 table {
-    background-color: #00798C !important; /* Hintergrund der Tabelle */
+    background-color: grey !important; /* Hintergrund der Tabelle */
     color: black !important; /* Tabelle */
     border-collapse: collapse;
     width: 100%;
@@ -16,7 +16,7 @@ table {
 }
 
 th, td {
-    border: 1px solid #ccc;
+    border: 1px solid #00798C;
     padding: 8px;
     text-align: left;
 }
