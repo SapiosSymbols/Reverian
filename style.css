@@ -1,0 +1,35 @@
+/* style.css */
+
+/* Hintergrund und Schrift */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Überschrift */
+h1 {
+    text-align: center;
+}
+
+/* Tabellenstil */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Tabellenzellen */
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Tabellenkopf */
+th {
+    background-color: #333;
+}
