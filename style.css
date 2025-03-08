@@ -1,5 +1,5 @@
 body {
-    background-color: grey !important; /* Hintergrund des gesamten Körpers */
+    background-color: #40E0D0 !important; /* Hintergrund in Blau-Türkis */
     color: white; /* Schriftfarbe */
     font-family: Arial, sans-serif;
     max-width: 800px;
@@ -8,19 +8,19 @@ body {
 }
 
 table {
-    background-color: grey !important; /* Hintergrund der Tabelle */
-    color: black !important; /* Tabelle */
+    background-color: #f4f4f4 !important; /* Hellerer Hintergrund für die Tabelle */
+    color: black !important; /* Schriftfarbe in der Tabelle */
     border-collapse: collapse;
     width: 100%;
     margin-top: 20px;
 }
 
 th, td {
-    border: 1px solid #00798C;
+    border: 1px solid #00798C; /* Randfarbe */
     padding: 8px;
     text-align: left;
 }
 
 th {
-    background-color: #333; /* Überschriften für Kontrast */
+    background-color: #333; /* Dunkler Hintergrund für Tabellenüberschriften */
 }
