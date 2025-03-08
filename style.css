@@ -1,11 +1,11 @@
 /* style.css */
 
-/* Hintergrund und Schrift */
+/* Hintergrundfarbe der gesamten Seite */
 body {
-    background-color: #333; /* Dunkelgrauer Hintergrund */
-    color: white;
+    background-color: #222; /* Dunkles Grau */
+    color: white; /* Weiße Schrift */
     font-family: Arial, sans-serif;
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
     padding: 20px;
 }
@@ -23,26 +23,29 @@ table {
     background-color: black; /* Schwarzer Hintergrund für die Tabelle */
 }
 
+/* Tabellenkopf */
+th {
+    background-color: #444; /* Dunkelgrau */
+    color: white; /* Weiße Schrift */
+}
+
 /* Tabellenzellen */
-th, td {
-    border: 1px solid #ccc;
+td {
+    background-color: #333; /* Mittelgrau für Kontrast */
+    border: 1px solid white;
     padding: 8px;
     text-align: left;
-    color: white;  /* Schriftfarbe in der Tabelle weiß */
+    color: white; /* Schrift in der Tabelle */
 }
 
-/* Tabellenkopf */
-th {
-    background-color: #444;  /* Etwas heller als die Tabelle, für den Kopf */
-}
-
-/* Tabellenzellenhintergrund */
-td {
-    background-color: #222;  /* Dunkelgrauer Hintergrund für die Zellen */
-}
-
-
-/* Tabellenkopf */
-th {
-    background-color: #333;
+/* Suchleiste */
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
 }
