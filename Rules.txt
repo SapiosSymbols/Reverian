@@ -1,3 +1,8 @@
+  <footer>
+    <p>Die Regeln zur Geheimsprache findest du in der <a href="rules.txt" target="_blank">rules.txt</a>.</p>
+  </footer>
+
+
 # ============================================
 # Regeln der Geheimsprache
 # ============================================
