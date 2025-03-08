@@ -8,8 +8,8 @@ body {
 }
 
 table {
-    background-color: #f4f4f4 !important; /* Hellerer Hintergrund für die Tabelle */
-    color: black !important; /* Schriftfarbe in der Tabelle */
+    background-color: #8f8d8d !important; /* Hellerer Hintergrund für die Tabelle */
+    color: white !important; /* Schriftfarbe in der Tabelle */
     border-collapse: collapse;
     width: 100%;
     margin-top: 20px;
