@@ -1,6 +1,6 @@
 /* Hintergrund der gesamten Seite */
 body {
-    background-color: #333; /* Dunkelgrau */
+background-color: #808080; /* Grau in Hex */
     color: white; /* Weiße Schrift */
     font-family: Arial, sans-serif;
     max-width: 800px;
