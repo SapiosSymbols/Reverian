@@ -13,7 +13,7 @@ body {
 }
 
 table {
-    background-color: #8f8d8d !important; /* Hellerer Hintergrund für die Tabelle */
+    background-color: #cccccc !important; /* Hellerer Hintergrund für die Tabelle */
     color: white !important; /* Schriftfarbe in der Tabelle */
     border-collapse: collapse;
     width: 100%;
@@ -21,7 +21,7 @@ table {
 }
 
 th, td {
-    border: 1px solid #00798C; /* Randfarbe */
+    border: 1px solid #005f6e; /* Randfarbe */
     padding: 8px;
     text-align: left;
 }
