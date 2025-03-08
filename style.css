@@ -1,59 +1,26 @@
-/* Allgemeines Styling für den Hintergrund und die Schriftfarbe */
 body {
-    background-color: black; /* Ganzer Hintergrund schwarz */
+    background-color: black !important; /* Hintergrund des gesamten Körpers schwarz */
     color: white; /* Schriftfarbe weiß */
     font-family: Arial, sans-serif;
-    max-width: 800px; /* Begrenzte Breite für bessere Lesbarkeit */
+    max-width: 800px;
     margin: auto;
     padding: 20px;
 }
 
-/* Überschriften weiß */
-h1, h2, h3 {
-    color: white;
-    text-align: center;
-}
-
-/* Tabelle Styling */
 table {
-    width: 100%;
+    background-color: blue !important; /* Hintergrund der Tabelle blau */
+    color: white; /* Schriftfarbe in der Tabelle weiß */
     border-collapse: collapse;
+    width: 100%;
     margin-top: 20px;
-    background-color: black; /* Tabelle ebenfalls schwarz */
-    color: white; /* Schrift in der Tabelle weiß */
 }
 
-/* Tabellenzellen */
 th, td {
-    border: 1px solid white; /* Weiße Umrandung */
+    border: 1px solid #ccc;
     padding: 8px;
     text-align: left;
 }
 
-/* Tabellen-Header in einem dunkleren Grau */
 th {
-    background-color: #222; /* Sehr dunkles Grau */
-}
-
-/* Links anpassen, damit sie auf schwarzem Hintergrund gut sichtbar sind */
-a {
-    color: #00bfff; /* Helles Blau für gute Lesbarkeit */
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Optional: Falls du Buttons hast */
-button {
-    background-color: #222; /* Dunkelgrau */
-    color: white;
-    border: 1px solid white;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #444; /* Etwas helleres Grau */
+    background-color: #333; /* Dunkelgraue Überschriften für Kontrast */
 }
