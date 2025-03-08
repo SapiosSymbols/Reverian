@@ -28,7 +28,7 @@
     <!-- Verben -->
     <div class="category">
         <h2>Verben</h2>
-        <table>
+        <table id="verbTable">
             <tr>
                 <th>Deutsch</th>
                 <th>Reverianisch</th>
@@ -59,7 +59,7 @@
     <!-- Substantive -->
     <div class="category">
         <h2>Substantive</h2>
-        <table>
+        <table id="nounTable">
             <tr>
                 <th>Deutsch</th>
                 <th>Reverianisch</th>
@@ -90,7 +90,7 @@
     <!-- Adjektive -->
     <div class="category">
         <h2>Adjektive</h2>
-        <table>
+        <table id="adjectiveTable">
             <tr>
                 <th>Deutsch</th>
                 <th>Reverianisch</th>
@@ -124,6 +124,33 @@
 
     <!-- Weitere Kategorien können hier hinzugefügt werden -->
 
+    <script>
+        function searchFunction() {
+            var input, filter, tables, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toLowerCase();
+            tables = document.getElementsByTagName("table");
+
+            // Alle Tabellen durchgehen
+            for (var j = 0; j < tables.length; j++) {
+                tr = tables[j].getElementsByTagName("tr");
+
+                // Alle Zeilen der aktuellen Tabelle durchgehen
+                for (i = 1; i < tr.length; i++) { // Überspringe die erste Zeile mit den Headern
+                    td = tr[i].getElementsByTagName("td");
+                    if (td) {
+                        // Text des ersten Zellen (Deutsch) prüfen
+                        txtValue = td[0].textContent || td[0].innerText;
+                        if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                            tr[i].style.display = ""; // Zeige die Zeile an, wenn das Wort passt
+                        } else {
+                            tr[i].style.display = "none"; // Verstecke die Zeile, wenn das Wort nicht passt
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
 </body>
 </html>
-
