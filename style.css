@@ -4,7 +4,7 @@ body {
         #de7545  /* orange */
                                 
     ) !important;
-    color: black; /* Farbe für die äußere Schrift? */
+    color: white; /* äußere Schriftfarbe */
     font-family: Arial, sans-serif;
     max-width: 800px;
     margin: auto;
