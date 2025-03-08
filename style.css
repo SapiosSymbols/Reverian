@@ -1,46 +1,59 @@
-/* Hintergrund der gesamten Seite */
+/* Allgemeines Styling für den Hintergrund und die Schriftfarbe */
 body {
-background-color: #808080; /* Grau in Hex */
-    color: white; /* Weiße Schrift */
+    background-color: black; /* Ganzer Hintergrund schwarz */
+    color: white; /* Schriftfarbe weiß */
     font-family: Arial, sans-serif;
-    max-width: 800px;
+    max-width: 800px; /* Begrenzte Breite für bessere Lesbarkeit */
     margin: auto;
     padding: 20px;
 }
 
-/* Überschrift */
-h1 {
+/* Überschriften weiß */
+h1, h2, h3 {
+    color: white;
     text-align: center;
 }
 
-/* Tabellenstil */
+/* Tabelle Styling */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background-color: grey; /* Hintergrund der Tabelle */
-    color: white; /* Schriftfarbe */
+    background-color: black; /* Tabelle ebenfalls schwarz */
+    color: white; /* Schrift in der Tabelle weiß */
 }
 
+/* Tabellenzellen */
 th, td {
-    border: 1px black; /* Ränder */
+    border: 1px solid white; /* Weiße Umrandung */
     padding: 8px;
     text-align: left;
 }
 
+/* Tabellen-Header in einem dunkleren Grau */
 th {
-    background-color: red; /* Dunkelgrau für die Kopfzeile */
+    background-color: #222; /* Sehr dunkles Grau */
 }
 
+/* Links anpassen, damit sie auf schwarzem Hintergrund gut sichtbar sind */
+a {
+    color: #00bfff; /* Helles Blau für gute Lesbarkeit */
+    text-decoration: none;
+}
 
-/* Suchleiste */
-#searchInput {
-    width: 100%;
-    padding: 10px;
-    margin: 20px 0;
-    border: 1px black;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: grey;
-    color: red;
+a:hover {
+    text-decoration: underline;
+}
+
+/* Optional: Falls du Buttons hast */
+button {
+    background-color: #222; /* Dunkelgrau */
+    color: white;
+    border: 1px solid white;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444; /* Etwas helleres Grau */
 }
