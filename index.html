@@ -2,7 +2,6 @@
 <html lang="de">
 <head>
 <link rel="stylesheet" href="style.css">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reverian</title>
@@ -322,7 +321,7 @@
             </tr>
             <tr>
                 <td>ich</td>
-                <td>phx (Aussprache: "fo")</td>
+                <td>phx (ausgesprochen "fo")</td>
             </tr>
             <tr>
                 <td>mich</td>
@@ -334,155 +333,29 @@
             </tr>
         </table>
     </div>
+  
+  <!-- Über die Zahlen -->
 
-    <!-- Zahlen -->
-    <div class="category">
-        <h2>Zahlen</h2>
-        <table id="numbersTable">
-            <tr>
-                <th>Deutsch</th>
-                <th>Reverianisch</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>i</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>dwo</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>tra</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>kva</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>pen</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>sex</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>set</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>ok</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>ni</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>dek</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>dek-a-i</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>dek-a-dwo</td>
-            </tr>
-            <tr>
-                <td>13</td>
-                <td>dek-a-tra</td>
-            </tr>
-            <tr>
-                <td>14</td>
-                <td>dek-a-va</td>
-            </tr>
-            <tr>
-                <td>15</td>
-                <td>dek-a-pen</td>
-            </tr>
-            <tr>
-                <td>16</td>
-                <td>dek-a-sex</td>
-            </tr>
-            <tr>
-                <td>17</td>
-                <td>dek-a-sep</td>
-            </tr>
-            <tr>
-                <td>18</td>
-                <td>dek-a-ok</td>
-            </tr>
-            <tr>
-                <td>19</td>
-                <td>dek-a-ni</td>
-            </tr>
-            <tr>
-                <td>20</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>21</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>30</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>40</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>50</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>60</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>70</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>80</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>90</td>
-                <td>...</td>
-            </tr>
-            <tr>
-                <td>100</td>
-                <td>...</td>
-            </tr>
-        </table>
-    </div>
-
-    <script>
-        function searchFunction() {
-            let input = document.getElementById("searchInput").value.toUpperCase();
-            let tables = document.querySelectorAll("table");
-
-            tables.forEach(table => {
-                let rows = table.getElementsByTagName("tr");
-                for (let i = 1; i < rows.length; i++) {
-                    let cells = rows[i].getElementsByTagName("td");
-                    let match = false;
-                    for (let j = 0; j < cells.length; j++) {
-                        if (cells[j].innerHTML.toUpperCase().indexOf(input) > -1) {
-                            match = true;
-                            break;
-                        }
-                    }
-                    rows[i].style.display = match ? "" : "none";
+<script>
+    // Suchfunktion 
+    function searchFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById('searchInput');
+        filter = input.value.toUpperCase();
+        table = document.getElementById('verbTable');
+        tr = table.getElementsByTagName('tr');
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName('td')[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
                 }
-            });
+            }
         }
-    </script>
-
+    }
+</script>
 </body>
 </html>
