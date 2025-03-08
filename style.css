@@ -18,23 +18,20 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background-color: black; /* Schwarzer Hintergrund für die Tabelle */
-    color: white; /* Weiße Schrift */
+    background-color: black; /* Hintergrund der Tabelle */
+    color: white; /* Schriftfarbe */
 }
 
-/* Tabellenkopf */
-th {
-    background-color: #444; /* Dunkelgrau für leichte Abgrenzung */
-    color: white;
-}
-
-/* Tabellenzellen */
-td {
-    background-color: black; /* Komplett schwarz */
-    border: 1px solid white; /* Weiße Umrandung für bessere Sichtbarkeit */
+th, td {
+    border: 1px solid white; /* Weiße Ränder für bessere Sichtbarkeit */
     padding: 8px;
     text-align: left;
 }
+
+th {
+    background-color: #222; /* Dunkelgrau für die Kopfzeile */
+}
+
 
 /* Suchleiste */
 #searchInput {
