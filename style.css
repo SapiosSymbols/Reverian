@@ -1,9 +1,9 @@
 body {
     background: linear-gradient(135deg, 
-        #A7FFEB, /* Helles Türkis */
-        #00BFA5, /* Dunkleres Türkis */
-        #7E57C2, /* Lila */
         #4A148C  /* Dunkles Lila */
+        #7E57C2, /* Lila */
+        #00BFA5, /* Dunkleres Türkis */
+        #a1cfcc, /* Türkis */
     ) !important;
     color: white;
     font-family: Arial, sans-serif;
