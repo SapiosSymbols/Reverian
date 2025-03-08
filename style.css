@@ -23,7 +23,7 @@ table {
 }
 
 th, td {
-    border: 1px solid white; /* Weiße Ränder für bessere Sichtbarkeit */
+    border: 1px grey; /* Weiße Ränder für bessere Sichtbarkeit */
     padding: 8px;
     text-align: left;
 }
