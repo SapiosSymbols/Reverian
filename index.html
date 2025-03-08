@@ -20,7 +20,7 @@
     <p>Vokabulare Suchleiste:</p>
 
     <!-- Suchleiste -->
-    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Suche nach Wörtern...">
+    <input type="text" id="searchInput" onkeyup="searchWords()" placeholder="Suche nach Wörtern...">
 
     <h3> Vokabular: </h3>
     <!-- Verben -->
@@ -426,103 +426,24 @@
 </div>
     
      <script>
-         <script>
-        // Sortiere die Tabelle alphabetisch nach den deutschen Wörtern
-        function sortTable() {
-            var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-            table = document.getElementById("wordTable");
-            switching = true;
-            dir = "asc"; // Setze die Richtung auf aufsteigend (alphabetisch)
-
-            // Wiederhole, bis keine Zeilen mehr gewechselt werden
-            while (switching) {
-                switching = false;
-                rows = table.rows;
-
-                // Durchlaufe alle Zeilen der Tabelle, außer der Kopfzeile
-                for (i = 1; i < (rows.length - 1); i++) {
-                    shouldSwitch = false;
-                    x = rows[i].getElementsByTagName("TD")[0]; // Erste Spalte (Deutsch)
-                    y = rows[i + 1].getElementsByTagName("TD")[0];
-
-                    // Vergleiche die deutschen Wörter
-                    if (dir == "asc") {
-                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                            shouldSwitch = true;
-                            break;
-                        }
-                    } else if (dir == "desc") {
-                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                            shouldSwitch = true;
-                            break;
-                        }
-                    }
-                }
-                if (shouldSwitch) {
-                    // Wechsle die Zeilen
-                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                    switching = true;
-                    switchcount++; // Zähle die Anzahl der Wechsel
-                } else {
-                    if (switchcount == 0 && dir == "asc") {
-                        dir = "desc"; // Wenn keine Zeilen gewechselt wurden, kehre die Richtung um
-                        switching = true;
-                    }
-                }
-            }
-        }
-
-        // Suchfunktion
         function searchWords() {
-            var input, filter, tables, rows, cell, i, j, txtValue;
-            input = document.getElementById("searchInput");
-            filter = input.value.toLowerCase();
-            tables = document.querySelectorAll("table");
-
-            for (i = 0; i < tables.length; i++) {
-                rows = tables[i].getElementsByTagName("tr");
-
-                for (j = 1; j < rows.length; j++) {
-                    cell = rows[j].getElementsByTagName("td")[0]; // Sucht in der ersten Spalte (Deutsch)
+            var input = document.getElementById("searchInput").value.toLowerCase();
+            var tables = document.querySelectorAll("table");
+            tables.forEach(function(table) {
+                var rows = table.getElementsByTagName("tr");
+                for (var i = 1; i < rows.length; i++) {
+                    var cell = rows[i].getElementsByTagName("td")[0];  // Such nach der ersten Zelle
                     if (cell) {
-                        txtValue = cell.textContent || cell.innerText;
-                        if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                            rows[j].style.display = "";
+                        var cellText = cell.textContent || cell.innerText;
+                        if (cellText.toLowerCase().indexOf(input) > -1) {
+                            rows[i].style.display = "";
                         } else {
-                            rows[j].style.display = "none";
+                            rows[i].style.display = "none";
                         }
                     }
                 }
-            }
-        }
-
-        // Rufe die Sortierfunktion auf, wenn die Seite geladen wird
-        window.onload = function() {
-            sortTable();
-        }
-        function searchWords() {
-            var input, filter, tables, rows, cell, i, j, txtValue;
-            input = document.getElementById("searchInput");
-            filter = input.value.toLowerCase();
-            tables = document.querySelectorAll("table");
-
-            for (i = 0; i < tables.length; i++) {
-                rows = tables[i].getElementsByTagName("tr");
-
-                for (j = 1; j < rows.length; j++) {
-                    cell = rows[j].getElementsByTagName("td")[0]; // Sucht in der ersten Spalte (Deutsch)
-                    if (cell) {
-                        txtValue = cell.textContent || cell.innerText;
-                        if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                            rows[j].style.display = "";
-                        } else {
-                            rows[j].style.display = "none";
-                        }
-                    }
-                }
-            }
+            });
         }
     </script>
-
 </body>
 </html>
